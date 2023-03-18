@@ -1,0 +1,497 @@
+body{
+    background-color: #f5f5f5;
+    font-family: 'Google Sans Text', sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-family: 'Google Sans Text', sans-serif;
+    z-index: 9999;
+  }
+.space{
+  padding: 2px;
+}
+  .nav > .nav-header {
+    display: inline;
+  }
+
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    padding: 10px 10px 10px 10px;
+    font-family: 'Google Sans Text', sans-serif;
+    text-decoration: none;
+  }
+
+  /* .nav > .nav-header > .nav-logo {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+  }
+  .nav > .nav-header > .nav-logo > .title-logo{
+    display: absolute;
+    height: 50px;
+    padding-left: 10px;
+    z-index: 1;
+  }
+   */
+  .nav > .nav-btn {
+    display: none;
+  }
+
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+    z-index: 9999;
+  }
+
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .nav > #nav-check {
+    display: none;
+  }
+
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid rgb(0, 0, 0);
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: rgb(255, 255, 255);
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+
+/* schedule section */
+/* make a rectangle and center the div */
+.schedule-coming-soon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.schedule {
+    width: 100%;
+    position: relative;
+    top: 50px;
+    padding: 10px;
+   
+}
+.schedule-title{
+  font-size: 30px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.container {
+    height: 100%;
+    width: 90%;
+    position: relative;
+}
+
+.scheduleContainer {
+  padding: 50px;
+  display: grid;
+  grid-gap: 0.2rem;
+  grid-template-columns: 5rem repeat(4, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+  grid-template-areas: "time800 stage stage stage stage" "time830 stage stage stage stage" "time900 stage stage stage stage" "time930 stage stage stage stage" "time1000 stage stage stage stage" "time1030 stage stage stage stage" "time1100 stage stage stage stage" "time1130 stage stage stage stage" "time1200 stage stage stage stage" "time1230 stage stage stage stage" "time1300 stage stage stage stage" "time1330 stage stage stage stage" "time1400 stage stage stage stage" "time1430 stage stage stage stage" "time1500 stage stage stage stage" "time1530 stage stage stage stage" "time1600 stage stage stage stage" "time1630 stage stage stage stage";
+}
+
+/**
+ * Time
+ */
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: thin dotted #ccc;
+  height: 100%;
+  padding: 0 0.5rem;
+}
+.time.start-800 {
+  grid-area: time800;
+}
+.time.start-830 {
+  grid-area: time830;
+}
+.time.start-900 {
+  grid-area: time900;
+}
+.time.start-930 {
+  grid-area: time930;
+}
+.time.start-1000 {
+  grid-area: time1000;
+}
+.time.start-1030 {
+  grid-area: time1030;
+}
+.time.start-1100 {
+  grid-area: time1100;
+}
+.time.start-1130 {
+  grid-area: time1130;
+}
+.time.start-1200 {
+  grid-area: time1200;
+}
+.time.start-1230 {
+  grid-area: time1230;
+}
+.time.start-1300 {
+  grid-area: time1300;
+}
+.time.start-1330 {
+  grid-area: time1330;
+}
+.time.start-1400 {
+  grid-area: time1400;
+}
+.time.start-1430 {
+  grid-area: time1430;
+}
+.time.start-1500 {
+  grid-area: time1500;
+}
+.time.start-1530 {
+  grid-area: time1530;
+}
+.time.start-1600 {
+  grid-area: time1600;
+}
+.time.start-1630 {
+  grid-area: time1630;
+}
+.time.start-1700 {
+  grid-area: time1700;
+}
+.time.start-1730 {
+  grid-area: time1730;
+}
+.time.start-1800 {
+  grid-area: time1800;
+}
+.time.start-1830 {
+  grid-area: time1830;
+}
+.time.start-1900 {
+  grid-area: time1900;
+}
+.time.start-1930 {
+  grid-area: time1930;
+}
+.time.start-2000 {
+  grid-area: time2000;
+}
+.time.start-2030 {
+  grid-area: time2030;
+}
+.time.start-2100 {
+  grid-area: time2100;
+}
+.time.start-2130 {
+  grid-area: time2130;
+}
+.time[class*="30"]:not(.start-1300) {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+/**
+ * Event
+ */
+.event {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  background-color: orange;
+  border-radius: 0.2rem;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.event span {
+  display: block;
+  width:fit-content;
+  font-size: 0.8em;
+  font-weight: normal;
+  background-color: #000000;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+}
+.event.start-800 {
+  grid-row-start: time800;
+}
+.event.start-830 {
+  grid-row-start: time830;
+}
+.event.start-900 {
+  grid-row-start: time900;
+}
+.event.start-930 {
+  grid-row-start: time930;
+}
+.event.start-1000 {
+  grid-row-start: time1000;
+}
+.event.start-1030 {
+  grid-row-start: time1030;
+}
+.event.start-1100 {
+  grid-row-start: time1100;
+}
+.event.start-1130 {
+  grid-row-start: time1130;
+}
+.event.start-1200 {
+  grid-row-start: time1200;
+}
+.event.start-1230 {
+  grid-row-start: time1230;
+}
+.event.start-1300 {
+  grid-row-start: time1300;
+}
+.event.start-1330 {
+  grid-row-start: time1330;
+}
+.event.start-1400 {
+  grid-row-start: time1400;
+}
+.event.start-1430 {
+  grid-row-start: time1430;
+}
+.event.start-1500 {
+  grid-row-start: time1500;
+}
+.event.start-1530 {
+  grid-row-start: time1530;
+}
+.event.start-1600 {
+  grid-row-start: time1600;
+}
+.event.start-1630 {
+  grid-row-start: time1630;
+}
+.event.start-1700 {
+  grid-row-start: time1700;
+}
+.event.start-1730 {
+  grid-row-start: time1730;
+}
+.event.start-1800 {
+  grid-row-start: time1800;
+}
+.event.start-1830 {
+  grid-row-start: time1830;
+}
+.event.start-1900 {
+  grid-row-start: time1900;
+}
+.event.start-1930 {
+  grid-row-start: time1930;
+}
+.event.start-2000 {
+  grid-row-start: time2000;
+}
+.event.start-2030 {
+  grid-row-start: time2030;
+}
+.event.start-2100 {
+  grid-row-start: time2100;
+}
+.event.start-2130 {
+  grid-row-start: time2130;
+}
+.event.end-800 {
+  grid-row-end: time800;
+}
+.event.end-830 {
+  grid-row-end: time830;
+}
+.event.end-900 {
+  grid-row-end: time900;
+}
+.event.end-930 {
+  grid-row-end: time930;
+}
+.event.end-1000 {
+  grid-row-end: time1000;
+}
+.event.end-1030 {
+  grid-row-end: time1030;
+}
+.event.end-1100 {
+  grid-row-end: time1100;
+}
+.event.end-1130 {
+  grid-row-end: time1130;
+}
+.event.end-1200 {
+  grid-row-end: time1200;
+}
+.event.end-1230 {
+  grid-row-end: time1230;
+}
+.event.end-1300 {
+  grid-row-end: time1300;
+}
+.event.end-1330 {
+  grid-row-end: time1330;
+}
+.event.end-1400 {
+  grid-row-end: time1400;
+}
+.event.end-1430 {
+  grid-row-end: time1430;
+}
+.event.end-1500 {
+  grid-row-end: time1500;
+}
+.event.end-1530 {
+  grid-row-end: time1530;
+}
+.event.end-1600 {
+  grid-row-end: time1600;
+}
+.event.end-1630 {
+  grid-row-end: time1630;
+}
+.event.end-1700 {
+  grid-row-end: time1700;
+}
+.event.end-1730 {
+  grid-row-end: time1730;
+}
+.event.end-1800 {
+  grid-row-end: time1800;
+}
+.event.end-1830 {
+  grid-row-end: time1830;
+}
+.event.end-1900 {
+  grid-row-end: time1900;
+}
+.event.end-1930 {
+  grid-row-end: time1930;
+}
+.event.end-2000 {
+  grid-row-end: time2000;
+}
+.event.end-2030 {
+  grid-row-end: time2030;
+}
+.event.end-2100 {
+  grid-row-end: time2100;
+}
+.event.end-2130 {
+  grid-row-end: time2130;
+}
+.event.length-1 {
+  grid-column-end: span 1;
+}
+.event.length-2 {
+  grid-column-end: span 2;
+}
+.event.length-3 {
+  grid-column-end: span 3;
+}
+.event.length-4 {
+  grid-column-end: span 4;
+}
+.event.stage-earth {
+  background-color: #FFA726;
+}
+.event.stage-mercury {
+  background-color: #9CCC65;
+}
+.event.stage-venus {
+  background-color: #FF8A65;
+}
+.event.stage-mars {
+  background-color: #B3E5FC;
+}
+.event.stage-jupiter {
+  background-color: #81D4FA;
+}
+.event.stage-saturn {
+  background-color: #26C6DA;
+}
+
+@media screen and (max-width: 600px) {
+  .event {
+    font-size: 15px;
+  }
+  .scheduleContainer {
+    padding: 10px;
+    grid-template-columns: 2rem repeat(4, 1fr);
+  }
+  .time {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: thin dotted #ccc;
+    padding: 2px;
+  }
+  
+}
